@@ -6,8 +6,6 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://Diesouto.gitlab.io",
   base: "landing-gta-vi",
-  outDir: "public",
-  publicDir: "static",
   vite: {
     plugins: [tailwindcss()],
   },
