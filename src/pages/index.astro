@@ -34,6 +34,13 @@ import LogoCutted from '@/assets/logo-cutted.svg';
 	<div class="fixed flex flex-col items-center justify-between w-full h-screen px-20 py-16">
 		<header class="flex justify-between w-full">
 			<LogoVIIcon class="size-11 text-white hover:text-yellow-100 transition-colors duration-500 cursor-pointer" />
+			<button
+				class="flex flex-col justify-center items-center w-12 h-11 ml-4 cursor-pointer group"
+				aria-label="Open menu"
+			>
+				<span class="block w-6 h-1 bg-white rounded-full mb-1.5 transition-all duration-300 group-hover:bg-yellow-100"></span>
+				<span class="block w-6 h-1 bg-white rounded-full mb-1.5 transition-all duration-300 group-hover:bg-yellow-100"></span>
+			</button>
 		</header>
 
 		<button class="absolute inset-0 w-fit h-fit m-auto cursor-pointer inline-block">
@@ -54,13 +61,29 @@ import LogoCutted from '@/assets/logo-cutted.svg';
 </Layout>
 
 <style>
-	#logo-mask {
-		background-color: white;
-		mask-image: url("/landing-gta-vi/logo-stack.svg");
-		mask-position: center 25%;
-		mask-repeat: no-repeat;
-		mask-size: clamp(5000vh, 3500%, 0vh);
-	}
+    #logo-mask {
+        background-color: white;
+        mask-image: url("/landing-gta-vi/logo-stack.svg");
+        mask-position: center 25%;
+        mask-repeat: no-repeat;
+        mask-size: clamp(5000vh, 3500%, 0vh);
+    }
+
+    @media (max-width: 768px) {
+				#hero-key-logo {
+					scale: 1.7;
+					top: 10em;
+				}
+		}
+    @media (max-width: 480px) {
+				#hero-key {
+						scale: 1.2;
+				}
+				#hero-key-logo {
+					scale: 1.9;
+					top: 12em;
+				}
+		}
 </style>
 
 <script>
